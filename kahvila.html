@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtuaalikahvila</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Virtuaalikahvila Logo">
+            <h1>Virtuaalikahvila</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#etusivu">Etusivu</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#tietoa-meista">Tietoa meistä</a></li>
+                <li><a href="#yhteystiedot">Yhteystiedot</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Etusivu -->
+    <section id="etusivu" class="hero">
+        <div class="hero-text">
+            <h2>Tervetuloa Virtuaalikahvilaan</h2>
+            <p>Virtuaalikahvila - paikka, jossa nautitaan hyvistä juomista ja leivonnaisista.</p>
+        </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu">
+        <div class="container">
+            <h2>Menu</h2>
+            <div class="menu-category">
+                <h3>Juomat</h3>
+                <div class="menu-item">
+                    <img src="coffee.jpg" alt="Kahvi">
+                    <p>Kahvi - Tumma, täyteläinen ja juuri sopivan kitkerä.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="tea.jpg" alt="Tee">
+                    <p>Tee - Valikoima laadukkaita teelaatuja ympäri maailman.</p>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>Leivonnaiset</h3>
+                <div class="menu-item">
+                    <img src="croissant.jpg" alt="Croissant">
+                    <p>Croissant - Perinteinen ranskalainen voisarvi.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="cake.jpg" alt="Kakku">
+                    <p>Suklaakakku - Täyteläinen ja suklainen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tietoa meistä -->
+    <section id="tietoa-meista">
+        <div class="container">
+            <h2>Tietoa meistä</h2>
+            <div class="about">
+                <img src="kahvila.jpg" alt="Kahvila">
+                <div class="about-text">
+                    <p>Virtuaalikahvila perustettiin rakkaudesta kahviin ja leivonnaisiin. Haluamme tarjota asiakkaillemme mukavan ja viihtyisän ympäristön, jossa nauttia laadukkaista tuotteista ja hyvästä seurasta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Yhteystiedot -->
+    <section id="yhteystiedot">
+        <div class="container">
+            <h2>Yhteystiedot</h2>
+            <div class="contact-info">
+                <p>Osoite: Virtuaalitie 1, 00100 Helsinki</p>
+                <p>Puhelin: 012 3456789</p>
+                <p>Sähköposti: info@virtuaalikahvila.fi</p>
+            </div>
+            <div class="map">
+                
+            </div>
+            <form class="contact-form">
+                <label for="name">Nimi:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Sähköposti:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Viesti:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Lähetä</button>
+            </form>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+        <p>&copy; 2024 Virtuaalikahvila. All rights reserved.</p>
+    </footer>
+</body>
+</html>

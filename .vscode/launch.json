@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "file:///C:/Users/tiitus.maukonen/OneDrive%20-%20Careeria/Sovellukset/KahvilaSivusto/kahvila.html",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}
