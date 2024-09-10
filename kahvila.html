@@ -5,8 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtuaalikahvila</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Teeman värit */
+        body.light-theme {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        body.dark-theme {
+            background-color: #333;
+            color: #f9f9f9;
+        }
+
+        /* Takaisin ylös -nappi */
+        #backToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #backToTopBtn:hover {
+            background-color: #333;
+        }
+
+        /* Kuvan zoomaus-efekti */
+        .menu-item img {
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item img:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
-<body>
+<body class="light-theme">
     
     <header>
         <div class="logo">
@@ -21,6 +60,7 @@
                 <li><a href="#yhteystiedot">Yhteystiedot</a></li>
             </ul>
         </nav>
+        <button id="themeToggle">Vaihda teema</button>
     </header>
 
     <!-- Etusivu -->
@@ -100,6 +140,8 @@
         </div>
     </section>
 
+    <!-- Takaisin ylös -nappi -->
+    <button id="backToTopBtn">Takaisin ylös</button>
 
     <footer>
         <div class="social-media">
@@ -138,6 +180,38 @@
                 form.reset(); // Tyhjentää lomakkeen
             }
         });
+
+        // Teeman vaihto (valoisa/pimeä)
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            if (body.classList.contains('light-theme')) {
+                body.classList.remove('light-theme');
+                body.classList.add('dark-theme');
+                themeToggle.textContent = "Vaihda vaaleaan teemaan";
+            } else {
+                body.classList.remove('dark-theme');
+                body.classList.add('light-theme');
+                themeToggle.textContent = "Vaihda pimeään teemaan";
+            }
+        });
+
+        // Takaisin ylös -nappi
+        const backToTopBtn = document.getElementById('backToTopBtn');
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
     </script>
 </body>
 </html>
