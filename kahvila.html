@@ -109,5 +109,35 @@
         </div>
         <p>&copy; 2024 Virtuaalikahvila. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form validation
+        const form = document.querySelector('.contact-form');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Estää lomakkeen lähettämisen
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name === '' || email === '' || message === '') {
+                alert('Täytä kaikki kentät ennen lähettämistä!');
+            } else {
+                alert('Kiitos viestistäsi, ' + name + '! Otamme sinuun yhteyttä pian.');
+                form.reset(); // Tyhjentää lomakkeen
+            }
+        });
+    </script>
 </body>
 </html>
